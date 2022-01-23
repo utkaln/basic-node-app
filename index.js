@@ -1,17 +1,3 @@
-//const rootElement = document.getElementById("app");
-//const myElement = document.createElement("h1");
-//myElement.className = "orange";
-//myElement.innerText = "Hello World";
-//const helloElement = function () {
-//return React.createElement("h1", { className: "orange" }, "Hello from React");
-//};
-
-//rootElement.appendChild(myElement);
-//ReactDOM.render(
-//  React.createElement(helloElement, {}, null),
-//  document.getElementById("app")
-//);
-
 const express = require("express"); //Import the express dependency
 const app = express(); //Instantiate an express app, the main work horse of this server
 const port = 3000; //Save the port number where your server will be listening
