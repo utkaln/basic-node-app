@@ -1,0 +1,22 @@
+{
+  "name": "basic-node-app",
+  "version": "1.0.0",
+  "description": "Basic Node App to learn concepts of CICD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utkaln/basic-node-app.git"
+  },
+  "author": "Utkal Nayak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/utkaln/basic-node-app/issues"
+  },
+  "homepage": "https://github.com/utkaln/basic-node-app#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
