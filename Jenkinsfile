@@ -15,5 +15,23 @@ pipeline {
                 }
             }
         }
+
+        stage("Execute ansible playbook") {
+            steps {
+                script {
+                    echo "Executing ansible playbook on ansible server to deploy to EC2 instances"
+                    def remoteObj = [:]
+                    remoteObj.name = "ansible-server"
+                    remoteObj.host = "54.211.9.192"
+                    remoteObj.allowAnyHosts = true
+                    withCredentials([sshUserPrivateKey(credentialsId: 'ansible-server-key', keyFileVariable: 'keyfile', usernameVariable: 'user')]) {
+                        remoteObj.user = user
+                        remoteObj.identityFile = keyfile
+                        sshCommand remote: remoteObj, command: "ls -lta"
+                    }
+                    
+                }
+            }
+        }
     }
 }
