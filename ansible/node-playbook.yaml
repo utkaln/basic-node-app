@@ -2,10 +2,15 @@
 - name: INSTALL DOCKER, DOCKER-COMPOSE and STARTED
   hosts: aws_ec2
   become: yes
+  gather_facts: False
   tasks:
     - name: docker present
+      vars:
+        ansible_python_interpreter: /usr/bin/python
       yum:
-        name: docker
+        name:
+          - docker
+          - python3
         update_cache: yes
         state: present
     - name: docker-compose downloaded and installed
