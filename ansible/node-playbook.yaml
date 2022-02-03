@@ -19,7 +19,7 @@
         dest: /usr/local/bin/docker-compose
         mode: +x
     - name: python for docker installed
-      pip3:
+      pip:
         name:
           - docker
           - docker-compose
