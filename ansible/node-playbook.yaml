@@ -1,5 +1,5 @@
 ---
-- name: INSTALL DOCKER, DOCKER-COMPOSE and STARTED
+- name: INSTALL PYTHON, DOCKER, DOCKER-COMPOSE and STARTED
   hosts: aws_ec2
   become: yes
   gather_facts: False
@@ -19,7 +19,7 @@
         dest: /usr/local/bin/docker-compose
         mode: +x
     - name: python for docker installed
-      pip:
+      pip3:
         name:
           - docker
           - docker-compose
@@ -27,10 +27,3 @@
       service:
         name: docker
         state: started
-    - name: ec2-user permission to run docker added
-      user:
-        name: ec2-user
-        groups: docker
-        append: yes
-    - name: server connection reset
-      meta: reset_connection
