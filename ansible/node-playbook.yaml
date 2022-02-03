@@ -1,5 +1,6 @@
+---
 - name: INSTALL DOCKER, DOCKER-COMPOSE and STARTED
-  hosts: all
+  hosts: aws_ec2
   become: yes
   tasks:
     - name: docker present
