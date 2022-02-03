@@ -11,7 +11,7 @@
         name:
           - docker
           - python
-          - python2-pip
+          - python3-pip
         update_cache: yes
         state: present
     - name: docker-compose downloaded and installed
